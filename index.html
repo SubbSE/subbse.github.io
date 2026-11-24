@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f7f2">
+  <meta name="description" content="Explore Subir Ghosh’s illustrated developer portfolio, open project files in his workshop, and follow the city down to street level.">
+  <meta property="og:title" content="Subir Ghosh — Developer & AI/ML Enthusiast">
+  <meta property="og:description" content="Follow the camera from Subir’s rooftop to his workshop and down to the tea stall.">
+  <meta property="og:image" content="https://subbse.github.io/assets/rooftop.webp">
+  <meta property="og:image:alt" content="An illustrated coder on a rooftop beneath a golden sun.">
+  <meta property="og:url" content="https://subbse.github.io/">
+  <title>Subir Ghosh — Developer & AI/ML Enthusiast</title>
+  <link rel="icon" href="./assets/sg.svg" type="image/svg+xml">
+  <link rel="preload" href="./fonts/dm-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <script>
+    try {
+      const savedLight = localStorage.getItem("subir-view");
+      if (["day", "dusk", "night"].includes(savedLight)) document.documentElement.dataset.theme = savedLight;
+    } catch {}
+  </script>
+  <link rel="stylesheet" href="./style.css?v=scene-stops-1">
+  <script src="./app.js?v=immersive-workbench-1" defer></script>
+  <script src="./city.js?v=street-detail-1" defer></script>
+</head>
+<body>
+  <svg class="ink-filters" width="0" height="0" aria-hidden="true"><defs>
+    <filter id="evening-ink" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values=".94 .14 0 0 0  .17 1.09 0 0 0  .26 0 1.21 0 .016  0 0 0 1 0"/></filter>
+  </defs></svg>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="city-backdrop" aria-hidden="true">
+    <div class="viewfinder">
+      <div class="city-world">
+        <div class="roof-painting">
+          <div class="paint-stack">
+            <div class="print" data-light="day"><img class="plate" src="./assets/rooftop.webp" width="1536" height="1024" alt="" fetchpriority="high"></div>
+            <div class="print" data-light="dusk"><img class="plate" src="./assets/rooftop-dusk.webp" width="1536" height="1024" alt=""></div>
+            <div class="print" data-light="night"><img class="plate" src="./assets/rooftop-night.webp" width="1536" height="1024" alt=""></div>
+            <div class="celestial-field" aria-hidden="true"><i class="afterglow"></i><i class="sun-disc"></i><i class="moon-disc"></i></div>
+            <canvas class="sky-life"></canvas>
+          </div>
+        </div>
+        <div class="street-world">
+          <div class="street-set" aria-hidden="true">
+            <div class="print" data-light="day"><img class="street-day" src="./assets/street-day.webp" alt="" width="1902" height="827"></div>
+            <div class="print" data-light="dusk">
+              <img class="street-day" src="./assets/street-day.webp" alt="" width="1902" height="827">
+              <img class="street-night evening-windows" src="./assets/street-night.webp" alt="" width="1902" height="827">
+            </div>
+            <div class="print" data-light="night"><img class="street-night" src="./assets/street-night.webp" alt="" width="1902" height="827"></div>
+          </div>
+          <div class="workroom">
+            <div class="building-view">
+              <img class="room-art" src="./assets/workbench-interior.webp" width="1672" height="941" alt="">
+              <div class="room-ambient"></div>
+              <img class="lit-surface" src="./assets/workbench-interior.webp" width="1672" height="941" alt="">
+              <svg class="lamp-spill" viewBox="790 380 635 423" aria-hidden="true" focusable="false">
+                <defs>
+                  <radialGradient id="light-falloff"><stop stop-color="#ffd583" stop-opacity=".65"/><stop offset=".55" stop-color="#faba5e" stop-opacity=".24"/><stop offset="1" stop-color="#e9933d" stop-opacity="0"/></radialGradient>
+                </defs>
+                <ellipse cx="1125" cy="528" rx="205" ry="131" fill="url(#light-falloff)"/>
+                <ellipse cx="1101" cy="720" rx="307" ry="65" fill="url(#light-falloff)"/>
+              </svg>
+              <svg class="object-casts" viewBox="583 636 1035 191" aria-hidden="true" focusable="false">
+                <defs>
+                  <linearGradient id="left-cast"><stop stop-color="#231921" stop-opacity="0"/><stop offset=".67" stop-color="#211819" stop-opacity=".68"/><stop offset="1" stop-color="#211819"/></linearGradient>
+                  <linearGradient id="right-cast"><stop stop-color="#201819"/><stop offset=".4" stop-color="#251a1a" stop-opacity=".76"/><stop offset="1" stop-color="#281d21" stop-opacity="0"/></linearGradient>
+                  <filter id="penumbra" x="-20%" y="-50%" width="140%" height="200%"><feGaussianBlur stdDeviation="2.8"/></filter>
+                </defs>
+                <g filter="url(#penumbra)">
+                  <!-- Each contact starts on its object and trails away from the bulb. -->
+                  <path fill="url(#left-cast)" d="M994 657 Q1021 671 1063 664 L1007 696 Q978 701 924 693Z"/>
+                  <path fill="url(#right-cast)" d="M1260 687 Q1283 696 1327 686 L1398 713 Q1372 725 1315 716Z"/>
+                  <path fill="url(#right-cast)" d="M1116 683 Q1154 693 1203 683 L1220 705 Q1186 712 1129 700Z"/>
+                  <path fill="url(#left-cast)" d="M624 785 Q735 794 855 790 L839 810 Q707 813 597 798Z"/>
+                  <path fill="url(#right-cast)" d="M1364 692 Q1422 706 1504 691 L1594 722 Q1518 733 1424 711Z"/>
+                </g>
+              </svg>
+              <svg class="bulb-light" viewBox="1077 362 102 69" aria-hidden="true" focusable="false">
+                <defs>
+                  <radialGradient id="filament"><stop stop-color="#fffce1"/><stop offset=".35" stop-color="#ffedab" stop-opacity=".86"/><stop offset="1" stop-color="#ffce6c" stop-opacity="0"/></radialGradient>
+                </defs>
+                <ellipse cx="1128" cy="396" rx="48" ry="31" fill="url(#filament)"/>
+                <path fill="#fff3ba" d="M1109 384 Q1128 379 1149 391 Q1146 413 1128 417 Q1111 414 1109 397Z"/>
+              </svg>
+              <svg class="crt-glow" viewBox="453 432 195 171" aria-hidden="true" focusable="false">
+                <defs>
+                  <clipPath id="crt-glass"><path d="M475 445 Q539 433 625 444 Q642 449 640 475 L636 580 Q635 593 611 596 Q534 600 472 593 Q459 590 460 569 L462 469 Q462 454 475 445Z"/></clipPath>
+                </defs>
+                <g clip-path="url(#crt-glass)">
+                  <path class="crt-scan" stroke="#ffedb3" stroke-opacity=".14" stroke-width="4" d="M459 445H644"/>
+                </g>
+              </svg>
+            </div>
+          </div>
+          <canvas id="pedestrians"></canvas>
+        </div>
+      </div>
+      <div class="roof-shade"></div>
+      <div class="room-shade"></div>
+    </div>
+  </div>
+  <div class="upper-floors">
+    <header class="mast">
+      <div class="mast-inner">
+        <a class="mark" href="#top" aria-label="Subir Ghosh, back to the rooftop">sg<span>.</span></a>
+        <nav aria-label="City stops">
+          <a href="#top" aria-current="location">Rooftop</a>
+          <a href="#playground">Workshop</a>
+          <a href="#street">Street</a>
+        </nav>
+        <fieldset class="time-picker">
+          <legend class="sr-only">City lighting</legend>
+          <label><input type="radio" name="city-light" value="day" checked><span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v3m0 14v3M2 12h3m14 0h3M4.9 4.9 7 7m10 10 2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg>Daylight</span></label>
+          <label><input type="radio" name="city-light" value="dusk"><span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 16.5h20m-17 4h14M6.5 14a5.5 5.5 0 0 1 11 0M12 3v3M3 7l2 2m16-2-2 2"/></svg>Dusk</span></label>
+          <label><input type="radio" name="city-light" value="night"><span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.7 15.5A8.3 8.3 0 0 1 9 4.3a8.6 8.6 0 1 0 10.7 11.2Z"/></svg>Moonlight</span></label>
+        </fieldset>
+      </div>
+      <div class="travel-line" aria-hidden="true"><span></span></div>
+    </header>
+    <main id="main">
+      <section class="chapter chapter-roof" id="top" aria-labelledby="name">
+        <div class="chapter-copy" id="about">
+          <p class="eyebrow">Developer · AI/ML enthusiast</p>
+          <h1 id="name"><span>Subir</span> <em>Ghosh<span class="period">.</span></em></h1>
+          <p class="intro">I build for the web and explore machine learning.</p>
+          <a class="route-link" href="#playground"><span class="scroll-mark" aria-hidden="true"></span>Visit the workshop</a>
+        </div>
+      </section>
+      <section class="chapter chapter-shop" id="playground" aria-labelledby="shop-title">
+        <div class="chapter-copy">
+          <div class="shop-heading">
+            <h2 id="shop-title">The <em>workshop.</em></h2>
+            <p class="intro">Open a project file to explore the build and try it out.</p>
+          </div>
+          <div class="project-shelf" role="group" aria-label="Project files">
+            <a class="project-file" data-project="fieldnotes" href="?project=fieldnotes#playground" aria-haspopup="dialog">
+              <span class="file-cover"><span class="file-thumb notes-thumb" aria-hidden="true"><i></i><i></i><i></i></span><span class="file-label"><small>Search tool</small><strong>Fieldnotes</strong></span></span>
+            </a>
+            <a class="project-file" data-project="boundary" href="?project=boundary#playground" aria-haspopup="dialog">
+              <span class="file-cover"><span class="file-thumb boundary-thumb" aria-hidden="true"><canvas id="boundary-cover"></canvas></span><span class="file-label"><small>Machine learning</small><strong>Decision Boundary</strong></span></span>
+            </a>
+            <a class="project-file" data-project="city" href="?project=city#playground" aria-haspopup="dialog">
+              <span class="file-cover"><span class="file-thumb city-thumb" aria-hidden="true"></span><span class="file-label"><small>Frontend</small><strong>City in Ink</strong></span></span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <footer id="street" aria-labelledby="street-title">
+    <div class="street-sign">
+      <p class="eyebrow">Street level</p>
+      <h2 id="street-title">See you <em>around<span class="period">.</span></em></h2>
+      <p class="intro">That’s me by the tea stall.</p>
+    </div>
+    <p class="colophon">© Subir Ghosh</p>
+  </footer>
+  <dialog id="project-dialog" aria-labelledby="project-title">
+    <div class="folio-bar">
+      <label>Project file <select id="choose-project"><option value="fieldnotes">Fieldnotes</option><option value="boundary">Decision Boundary</option><option value="city">City in Ink</option></select></label>
+      <button id="close" type="button" autofocus>Close</button>
+    </div>
+    <div class="folio-body">
+      <article class="folio-copy">
+        <p class="eyebrow" id="project-kind"></p><h2 id="project-title"></h2>
+        <p id="project-brief"></p>
+        <h3>Build notes</h3><p id="project-method"></p>
+        <h3>Built with</h3><p id="project-stack"></p>
+      </article>
+      <section class="folio-preview" aria-labelledby="preview-title">
+        <h3 id="preview-title"></h3>
+        <div id="notes-demo" hidden>
+          <label class="notebook-search">Search the notebook<input id="note-query" type="search" placeholder="Try rooftop or tea" autocomplete="off" maxlength="120"></label>
+          <p class="result-count" id="note-count" role="status"></p>
+          <div id="note-results"></div>
+        </div>
+    <div id="boundary-demo" hidden>
+      <div class="demo-stage"><canvas id="boundary-live" tabindex="0" aria-label="Classifier field. Use arrow keys to aim, then press Enter to add the selected class."></canvas><span class="probe" hidden aria-hidden="true"></span></div>
+      <div class="demo-controls">
+        <fieldset><legend>Point class</legend><div class="segmented"><label><input type="radio" name="point-class" value="0" checked><span>Circle</span></label><label><input type="radio" name="point-class" value="1"><span>Cross</span></label></div></fieldset>
+        <label class="select-label">Neighbors<select id="neighbors"><option>1</option><option selected>3</option><option>7</option></select></label>
+        <button type="button" class="reset" id="reset-points">Reset points</button>
+      </div>
+      <p class="demo-help">Click or tap the field to add a point. With a keyboard, focus the field, move with the arrow keys, and press Enter to place it.</p>
+      <span id="point-status" class="sr-only" role="status"></span>
+    </div>
+    <div id="glyph-demo" hidden>
+      <fieldset class="render-mode"><legend class="sr-only">Rendering</legend><div class="segmented"><label><input type="radio" name="render-mode" value="ink" checked><span>Illustration</span></label><label><input type="radio" name="render-mode" value="type"><span>Type study</span></label></div></fieldset>
+      <div id="city-print" role="img" aria-label="The rooftop illustration in the current city lighting"></div>
+      <div id="city-type" hidden>
+      <div class="demo-stage"><canvas id="glyph-live" aria-label="Rooftop illustration rendered as a grid of text characters"></canvas></div>
+      <div class="demo-controls">
+        <label class="density">Columns <output for="columns" id="column-value">100</output><input type="range" min="40" max="160" step="5" value="100" id="columns"></label>
+        <fieldset><legend>Alphabet</legend><div class="segmented"><label><input type="radio" name="alphabet" value="ascii" checked><span>ASCII</span></label><label><input type="radio" name="alphabet" value="binary"><span>Binary</span></label></div></fieldset>
+      </div>
+      </div>
+    </div>
+      </section>
+    </div>
+  </dialog>
+</body>
+</html>
